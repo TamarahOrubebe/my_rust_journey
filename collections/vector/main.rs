@@ -25,7 +25,7 @@ fn main() {
 
     let mut vec1 = vec![1, 2, 3];
     vec1.push(4);
-    let mut vec2 = Vec::from([1, 2, 3, 4]);
+    let vec2 = Vec::from([1, 2, 3, 4]);
     assert_eq!(vec1, vec2);
     // vec2.pop();
     // assert_eq!(vec1, vec2);
@@ -96,7 +96,7 @@ fn main() {
 
     println!("The median and mode for the given list are {:?}", median_mode(&mut v));
 
-    let mut b = "The cat the fat cat the fat cat sat on a mouse";
+    let b = "The cat the fat cat the fat cat sat on a mouse";
     println!("The string in pig latin is {}", pig_latin(String::from(b)));
 
 }
@@ -107,7 +107,7 @@ fn main() {
 // (“apple” becomes “apple-hay”). Keep in mind the details about UTF-8 encoding!
 
 fn pig_latin(s: String) -> String  {
-    let mut v: Vec<&str> = s.split(' ').collect();
+    let v: Vec<&str> = s.split(' ').collect();
     let mut v1: Vec<String> = Vec::new();
 
     fn is_vowel(c: char) -> bool {
