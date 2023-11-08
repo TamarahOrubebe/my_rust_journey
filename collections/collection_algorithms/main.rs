@@ -8,6 +8,11 @@ fn main () {
 
     v.extend(&v1);
 
+    let b = "A cat a fat cat a fat cat sat on a mouse";
+
+    println!("The median and mode for the list {} are {}", v, median_mode(&mut v));
+    println!("the pig-latin of {} is {}", b, pig_latin(b) );
+
     let mut company: HashMap<String, Vec<String>> = HashMap::new();
     
 
@@ -126,7 +131,7 @@ fn median_mode(x: &mut [u32]) -> (u32, u32) {
     // is added, so “first” becomes “irst-fay.” Words that start with a vowel have “hay” added to the end 
     // (“apple” becomes “apple-hay”). Keep in mind the details about UTF-8 encoding!
 
-    fn pig_latin(s: String) -> String  {
+    fn pig_latin(s: &str) -> String  {
     let v: Vec<&str> = s.split(' ').collect();
     let mut v1: Vec<String> = Vec::new();
 
