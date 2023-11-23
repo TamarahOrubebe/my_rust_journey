@@ -1,0 +1,1 @@
+/root/my_rust_journey/pancakes/target/debug/pancakes: /root/my_rust_journey/hello_macro/hello_macro_derive/src/lib.rs /root/my_rust_journey/hello_macro/src/lib.rs /root/my_rust_journey/pancakes/src/main.rs
