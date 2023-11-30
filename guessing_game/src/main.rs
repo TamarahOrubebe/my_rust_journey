@@ -21,7 +21,7 @@ fn main () {
         let guess : u32 = match guess.trim().parse() {
             Ok(num) => {
                 if num < 1 || num > 100 {
-                    println!("The number must be between 1 and 100");
+                    println!("The number must be between 1 and 100, but got: {}", num);
                     continue;
                 } else {
                     num
