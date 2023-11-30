@@ -19,11 +19,18 @@ fn main () {
             .read_line(&mut guess).expect("Error reading input");
 
         let guess : u32 = match guess.trim().parse() {
-            Ok(num) => num,
+            Ok(num) => {
+                if num < 1 || num > 100 {
+                    println!("The number must be between 1 and 100");
+                    continue;
+                } else {
+                    num
+                }
+            },
             Err(_) => continue
         };
 
-        println!("You guessed: {}", guess);
+       
 
         match guess.cmp(&secret_number) {
             Ordering::Less => println!("{}", "Too low!".red()),
