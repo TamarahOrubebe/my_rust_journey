@@ -24,7 +24,6 @@ impl Guess {
     }
 }
 
-
 #[derive(Debug)]
 struct Rectangle {
     width: u32,
@@ -42,7 +41,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn  adds_two() {
+    fn adds_two() {
         let result = add(2, 2);
         assert_eq!(result, 4);
     }
